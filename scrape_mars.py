@@ -48,7 +48,7 @@ def scrape():
         html = browser.html
         soup = bs(html, "html.parser")
         title = soup.find('h2').text.strip()
-        url = browser.links.find_by_text('Original')['href']
+        url = browser.links.find_by_text('Sample')['href']
         hemisphere_img_urls.append({"title": title, "img_url": url})
 
     scrape_dict = {"news_title":news_title, "news_p":news_p, "img_url":img_url, "hemisphere_img_urls":hemisphere_img_urls, "mars_facts_html":mars_facts_html}
